@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    section {
+        @apply w-[100%] py-[45px];
+    }
+}
+
+@layer components {
+    .container {
+        @apply w-[100%] px-3 mx-auto;
+    }
+
+    .btn {
+        @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px];
+    }
+
+    .heading {
+        @apply text-[26px] leading-[36px] font-[700] text-headingColor;
+    }
+
+    .text__para {
+        @apply text-[18px] leading-[30px] font-[400] text-textColor mt-[18px];
+    }
+
+    .header {
+        @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[100px];
+    }
+
+    .hero__section {
+        @apply bg-[url('./assets/images/hero-bg.png')] bg-no-repeat bg-center bg-cover
+    }
+}
+
+@layer utilities {
+    @screen lg {
+        .container {
+            @apply w-[85%];
+        }
+
+        section {
+            @apply py-[75px];
+        }
+    }
+
+    @screen md {
+        .container {
+            @apply px-5;
+        }
+
+        .heading {
+            @apply text-[44px] leading-[54px];
+        }
+
+        .text__para {
+            @apply text-[16px] leading-7 mt-3;
+        }
+    }
+}
